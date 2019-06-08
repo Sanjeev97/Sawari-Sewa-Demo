@@ -1,0 +1,78 @@
+-An activity represents a single screen with a user interface just like window or frame of Java.Android activity is the subclass of ContextThemeWrapper class.
+
+
+-Sha1
+ public class Sha1 extends UserImportHash
+ Represents the SHA1 password hashing algorithm. 
+
+-A DataSnapshot instance contains data from a Firebase Database location. Any time you read Database data, you receive the data as a DataSnapshot.               
+
+-If distance is less than 100, then driver is here
+
+-radius limit for getting driver is ?
+
+-getClosestDriver() is a recursive function but there is no stopping criteria incase of our app,
+	so the app crashes when there is no any driver/rider available
+
+-A GoogleMap must be acquired using getMapAsync(OnMapReadyCallback). This class automatically initializes the maps system and the view.
+
+-public void getMapAsync (OnMapReadyCallback callback)
+	Sets a callback object which will be triggered when the GoogleMap instance is ready to be used.
+
+	Note that:
+	
+	This method must be called from the main thread.
+	The callback will be executed in the main thread.
+	In the case where Google Play services is not installed on the user's device, the callback will not be triggered until the user installs it.
+	In the rare case where the GoogleMap is destroyed immediately after creation, the callback is not triggered.
+	The GoogleMap object provided by the callback is non-null.
+
+-callback	
+	The callback object that will be triggered when the map is ready to be used.
+
+-synchronous means it makes a call and waits for a response.
+
+-asynchronous means it makes a call and carries on doing other stuff then recieves a response some time later
+
+
+-
+	 The images taken with the camera are most likely stored in the jpg-format, which is lossy, but is relatively good for images with lots of colors (such as photographs).
+
+	When you compress the bitmap using your method you save it as a png. The png compression is lossless, but can achieve pretty small filesizes when there are few colors (such as in certain logotypes or other graphics). When the amount of colors and complexity in a png-file increases, so will the file size (this is why the camera saves a jpg - the quality/filesize ratio is much better than png for most photographs).
+
+-compress(Bitmap.CompressFormat format, int quality, OutputStream stream)
+ Write a compressed version of the bitmap to the specified outputstream.
+
+-
+	public class ByteArrayOutputStream
+	extends OutputStream
+	This class implements an output stream in which the data is written into a byte array. The buffer automatically grows as data is written to it. 
+	The data can be retrieved using toByteArray() and toString().
+
+- There are two basic compression types, lossless and lossy. LOSSLESS COMPRESSION stores all the information exactly, without loss of quality or accuracy, a perfect copy. 
+  The image recreated on the screen is exactly the same as the image created by the original designer. Lossless compression works particularly well for images with large, solid blocks of colour, which it condenses very effectively. 
+  For example, if on a row of pixels there is a line of thirty red pixels, then we can store the colour value for `red' once, and store the fact that it's repeated thirty times, which would save us around twenty to twenty-five colour-value entries. 
+  This type of simple compression can make significant savings with certain types of image.
+
+	LOSSY COMPRESSION, on the other hand, has more advanced ways of compressing the image data, though this comes at the cost of precise reproduction. 
+	In lossy compression, the program creating the image looks for patterns of detail within the image, and compresses areas of low detail much more highly than areas of high detail. 
+	The patterns are converted into mathematical formulae describing the pattern's colours, with more complex formulae being used for more highly detailed regions. This can result in images that are significantly smaller than when encoded using other compression methods, especially with photographic images (see Figure 7.7, “Lossy Compression - High Quality”.
+
+	The compression is called lossless because these formulae never recreate the image with total precision; there is always some loss of information when the image is decompressed. 
+	This is most noticable when a high compression ratio is used, since the image will become blocky and details will become blurred (see Figure 7.8, “Lossy Compression - Low Quality”). 
+	The information loss also becomes apparent if the image is repeatedly saved and reopened; like copying a video-cassette, each time a copy is made more of the quality is irretrievably lost.
+
+
+
+-Final variables
+
+	When a variable is declared with final keyword, its value can’t be modified, essentially, a constant. This also means that you must initialize a final variable. If the final variable is a reference, this means that the variable cannot be re-bound to reference another object, but internal state of the object pointed by that reference variable can be changed i.e. you can add or remove elements from final array or final collection. It is good practice to represent final variables in all uppercase, using underscore to separate words.
+
+-What is the IOException?
+	In general, I/O means Input or Output. 
+	Those methods throw the IOException whenever an input or output operation is failed or interpreted. 
+	Note that this won't be thrown for reading or writing to memory as Java will be handling it automatically.	
+
+	When an IOException is thrown, 
+	it means that whatever is throwing the exception (perhaps a try{}-catch block that reads data from a file) can throw an IOException ,
+	 for example if the file is not found, corrupted, etc, or when the file is otherwise unable to be read, or any other of a list of issues that can occur with.... 
